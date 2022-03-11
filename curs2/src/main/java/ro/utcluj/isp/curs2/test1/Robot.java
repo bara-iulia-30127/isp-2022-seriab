@@ -1,5 +1,7 @@
 package ro.utcluj.isp.curs2.test1;
 
+import java.util.Objects;
+
 /**
  * Specificatorii de acces:
  * - public - cuv cheie public
@@ -64,6 +66,30 @@ public class Robot {
 
     public String getName() {
         return name;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Robot other = (Robot) obj;
+        if (this.x != other.x) {
+            return false;
+        }
+        return Objects.equals(this.name, other.name);
     }
 
     
