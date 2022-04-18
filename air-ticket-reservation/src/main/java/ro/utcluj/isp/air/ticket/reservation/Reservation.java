@@ -8,7 +8,7 @@ package ro.utcluj.isp.air.ticket.reservation;
  *
  * @author mihai.hulea
  */
-public class Reservation implements Comparable{
+public class Reservation implements Comparable<Reservation>{
     private String reservationNumber;
     private String flightNumber;
     private int noTickets;
@@ -44,9 +44,15 @@ public class Reservation implements Comparable{
     }
 
     @Override
-    public int compareTo(Object arg0) {
-        return this.flightNumber.compareTo(((Reservation)arg0).flightNumber);
+    public int compareTo(Reservation arg0) {
+        return this.flightNumber.compareTo(arg0.flightNumber);
+       // return this.noTickets-arg0.noTickets;
     }
+    
+//    @Override
+//    public int compareTo(Reservation arg0) {
+//        return this.getNoTickets()-arg0.getNoTickets();
+//    }
 
     @Override
     public String toString() {

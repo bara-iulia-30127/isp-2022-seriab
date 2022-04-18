@@ -38,6 +38,18 @@ public class Demo {
             }
         });
         
+        rm.listReservationsSortByCriteria(new TicketSOrtComparator());
+        
     }
    
 }
+
+class TicketSOrtComparator implements Comparator<Reservation>{
+
+    @Override
+    public int compare(Reservation arg0, Reservation arg1) {
+        return arg0.getNoTickets()-arg1.getNoTickets();
+    }
+    
+}
+
