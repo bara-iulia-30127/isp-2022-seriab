@@ -47,10 +47,16 @@ public class Test {
         B b1 = new B();
         b1.start();
         
-        try {
-            b1.join();
-        } catch (InterruptedException ex) {
-            Logger.getLogger(Test.class.getName()).log(Level.SEVERE, null, ex);
-        }
+                B b2 = new B();
+        b2.start();
+        
+                B b3 = new B();
+        b3.start();
+        
+//        try {
+//            b1.join();
+//        } catch (InterruptedException ex) {
+//            Logger.getLogger(Test.class.getName()).log(Level.SEVERE, null, ex);
+//        }
     }
 }
