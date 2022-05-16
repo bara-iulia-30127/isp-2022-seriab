@@ -32,3 +32,5 @@ hs_err_pid*
 /CursThreads/target/
 /CarControl/target/
 /elevator-app/target/
+/ATCDemo/target/
+/demo-hash/target/
