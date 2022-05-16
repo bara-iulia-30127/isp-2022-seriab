@@ -45,6 +45,6 @@ public class Grade {
             /**
              * Use your email address used in the first lab when you registered for class.
              */
-            System.out.println(getClassCode("replace_with_your_email_address"));
+            System.out.println(getClassCode("bara.iulia@yahoo.com"));
         }
 }
